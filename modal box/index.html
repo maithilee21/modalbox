@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            font-size: 50px;
+            border: solid 1px;
+            margin-bottom: 30px;
+            width: 1200px;
+            margin: auto;
+        }
+
+        .btn{
+            width: 150px;
+            height: 40px;
+        }
+
+        .blackbox{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color:rgba(0, 0, 0, 0.5);
+            z-index: 2;
+         }
+
+         .modalbox{
+            width: 500px;
+            height: 300px;
+            background-color: rgb(240, 203, 135);
+            z-index: 3;
+            left: 50%;
+            top: 50%;
+            position: fixed;
+            margin-left: -250px;
+            margin-top: -150px;
+            border-radius: 10px;
+            box-shadow: 1px 2px 4p #888;
+         }
+
+
+        
+
+         .modal-content input{
+           width:400px;
+         }
+
+         h3{
+            font-size: 20px;
+         }
+
+         .submit{
+            background-color: green;
+            display: block;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+         }
+
+
+    </style>
+</head>
+<body onload="hide_box()">
+
+    <div class="modalbox">
+        <div class="modal-content">
+        <h3>NAME:</h3>
+        <input type="text" placeholder="name">
+
+        <h3>Email Id:</h3>
+        <input type="email" placeholder="email id ">
+
+        
+        <h3>phone number:</h3>
+        <input type="number" placeholder="number">
+
+        <button class="submit">submit</button>
+
+
+    </div>
+    </div>
+
+
+    <div class="blackbox" onclick="hide_box()"></div>
+
+    <div class="container">
+        <button class="btn" onclick="open_box()">open modal box</button>
+    </div>
+    
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, facere libero aliquid commodi,
+         eos quo excepturi dolor rem provident, magni architecto! Perferendis commodi facere vitae earum, 
+         ipsum minus porro amet.
+  </div>
+
+  <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, facere libero aliquid commodi,
+     eos quo excepturi dolor rem provident, magni architecto! Perferendis commodi facere vitae earum, 
+     ipsum minus porro amet.
+</div>
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, facere libero aliquid commodi,
+     eos quo excepturi dolor rem provident, magni architecto! Perferendis commodi facere vitae earum, 
+     ipsum minus porro amet.
+</div>
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, facere libero aliquid commodi,
+     eos quo excepturi dolor rem provident, magni architecto! Perferendis commodi facere vitae earum, 
+     ipsum minus porro amet.
+</div>
+
+<script>
+    function hide_box(){
+        document.querySelector(".modalbox").style.display="none";
+        document.querySelector(".blackbox").style.display="none";
+
+    }
+
+    function open_box(){
+        document.querySelector(".modalbox").style.display="block";
+        document.querySelector(".blackbox").style.display="block";
+    }
+</script>
+</body>
+</html>
